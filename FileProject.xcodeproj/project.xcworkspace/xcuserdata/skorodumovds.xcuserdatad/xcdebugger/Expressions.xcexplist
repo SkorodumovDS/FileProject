@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ImagePicker.imagePickerController(_:didFinishPickingMediaWithInfo:):ImagePicker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DocumentsViewController.tableView(_:commit:forRowAt:):DocumentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pathToDocum!.absoluteString +   pathToFile">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
