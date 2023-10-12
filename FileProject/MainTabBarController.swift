@@ -19,6 +19,9 @@ final class MainTabBarController : UITabBarController {
         let documentsNavController = UINavigationController()
         let documentsVC = Factory(flow: .documents, navigation: documentsNavController)
         
-        viewControllers = [documentsVC.navigationController]
+        let settingsNavController = UINavigationController()
+        let settingsVC = Factory(flow: .settings, navigation: settingsNavController)
+        
+        viewControllers = [documentsVC.navigationController, settingsVC.navigationController]
     }
 }

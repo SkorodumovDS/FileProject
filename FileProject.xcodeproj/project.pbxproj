@@ -20,6 +20,14 @@
 		C935FD4A2AC9FE8A003F04B1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD492AC9FE8A003F04B1 /* ImagePicker.swift */; };
 		C935FD4D2AC9FF74003F04B1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD4C2AC9FF74003F04B1 /* MainCoordinator.swift */; };
 		C935FD4F2AC9FF8D003F04B1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD4E2AC9FF8D003F04B1 /* MainTabBarController.swift */; };
+		C935FD512AD84315003F04B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD502AD84315003F04B1 /* SettingsViewController.swift */; };
+		C935FD532AD843D9003F04B1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD522AD843D9003F04B1 /* SettingTableViewCell.swift */; };
+		C935FD552AD8444F003F04B1 /* ResetPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD542AD8444F003F04B1 /* ResetPasswordTableViewCell.swift */; };
+		C935FD592AD8918A003F04B1 /* PasswordTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD582AD8918A003F04B1 /* PasswordTabBarController.swift */; };
+		C935FD5B2AD8925A003F04B1 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD5A2AD8925A003F04B1 /* PasswordViewController.swift */; };
+		C935FD5D2AD89520003F04B1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD5C2AD89520003F04B1 /* CustomButton.swift */; };
+		C935FD5F2AD8960A003F04B1 /* DocumentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935FD5E2AD8960A003F04B1 /* DocumentCoordinator.swift */; };
+		C935FD622AD89B63003F04B1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C935FD612AD89B63003F04B1 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,13 @@
 		C935FD492AC9FE8A003F04B1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C935FD4C2AC9FF74003F04B1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C935FD4E2AC9FF8D003F04B1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C935FD502AD84315003F04B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C935FD522AD843D9003F04B1 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		C935FD542AD8444F003F04B1 /* ResetPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		C935FD582AD8918A003F04B1 /* PasswordTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTabBarController.swift; sourceTree = "<group>"; };
+		C935FD5A2AD8925A003F04B1 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		C935FD5C2AD89520003F04B1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C935FD5E2AD8960A003F04B1 /* DocumentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C935FD622AD89B63003F04B1 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,11 +95,18 @@
 				C935FD392AC9FBF2003F04B1 /* Info.plist */,
 				C935FD412AC9FDAE003F04B1 /* Factory.swift */,
 				C935FD432AC9FE05003F04B1 /* DocumentViewController.swift */,
+				C935FD502AD84315003F04B1 /* SettingsViewController.swift */,
+				C935FD542AD8444F003F04B1 /* ResetPasswordTableViewCell.swift */,
+				C935FD522AD843D9003F04B1 /* SettingTableViewCell.swift */,
 				C935FD452AC9FE35003F04B1 /* DoumentList.swift */,
 				C935FD472AC9FE5C003F04B1 /* DocumentsTableViewCell.swift */,
 				C935FD492AC9FE8A003F04B1 /* ImagePicker.swift */,
 				C935FD4C2AC9FF74003F04B1 /* MainCoordinator.swift */,
 				C935FD4E2AC9FF8D003F04B1 /* MainTabBarController.swift */,
+				C935FD582AD8918A003F04B1 /* PasswordTabBarController.swift */,
+				C935FD5A2AD8925A003F04B1 /* PasswordViewController.swift */,
+				C935FD5C2AD89520003F04B1 /* CustomButton.swift */,
+				C935FD5E2AD8960A003F04B1 /* DocumentCoordinator.swift */,
 			);
 			path = FileProject;
 			sourceTree = "<group>";
@@ -104,6 +127,9 @@
 			dependencies = (
 			);
 			name = FileProject;
+			packageProductDependencies = (
+				C935FD612AD89B63003F04B1 /* KeychainSwift */,
+			);
 			productName = FileProject;
 			productReference = C935FD282AC9FBF0003F04B1 /* FileProject.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +158,9 @@
 				Base,
 			);
 			mainGroup = C935FD1F2AC9FBF0003F04B1;
+			packageReferences = (
+				C935FD602AD89B63003F04B1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = C935FD292AC9FBF0003F04B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,11 +190,18 @@
 			files = (
 				C935FD482AC9FE5C003F04B1 /* DocumentsTableViewCell.swift in Sources */,
 				C935FD442AC9FE05003F04B1 /* DocumentViewController.swift in Sources */,
+				C935FD5F2AD8960A003F04B1 /* DocumentCoordinator.swift in Sources */,
+				C935FD512AD84315003F04B1 /* SettingsViewController.swift in Sources */,
 				C935FD4F2AC9FF8D003F04B1 /* MainTabBarController.swift in Sources */,
+				C935FD5D2AD89520003F04B1 /* CustomButton.swift in Sources */,
 				C935FD422AC9FDAE003F04B1 /* Factory.swift in Sources */,
+				C935FD592AD8918A003F04B1 /* PasswordTabBarController.swift in Sources */,
 				C935FD462AC9FE35003F04B1 /* DoumentList.swift in Sources */,
+				C935FD532AD843D9003F04B1 /* SettingTableViewCell.swift in Sources */,
 				C935FD302AC9FBF0003F04B1 /* ViewController.swift in Sources */,
+				C935FD552AD8444F003F04B1 /* ResetPasswordTableViewCell.swift in Sources */,
 				C935FD4A2AC9FE8A003F04B1 /* ImagePicker.swift in Sources */,
+				C935FD5B2AD8925A003F04B1 /* PasswordViewController.swift in Sources */,
 				C935FD2C2AC9FBF0003F04B1 /* AppDelegate.swift in Sources */,
 				C935FD4D2AC9FF74003F04B1 /* MainCoordinator.swift in Sources */,
 				C935FD2E2AC9FBF0003F04B1 /* SceneDelegate.swift in Sources */,
@@ -384,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C935FD602AD89B63003F04B1 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C935FD612AD89B63003F04B1 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C935FD602AD89B63003F04B1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C935FD202AC9FBF0003F04B1 /* Project object */;
 }

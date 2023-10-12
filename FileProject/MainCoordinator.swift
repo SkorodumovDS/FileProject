@@ -13,7 +13,7 @@ protocol MainCoordinator {
 
 final class MainCoordinatorImp : MainCoordinator {
     func startApplication() -> UIViewController {
-        return MainTabBarController()
+        return PasswordTabBarController()
     }
 }
 

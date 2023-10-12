@@ -10,6 +10,8 @@ import UIKit
 final class Factory {
     enum Flow {
         case documents
+        case settings
+        case password
     }
     
     private let flow : Flow
@@ -32,6 +34,24 @@ final class Factory {
             DocumentsViewController.tabBarItem.title = "Documents"
             DocumentsViewController.tabBarItem.image = UIImage(systemName: "folder")
             navigationController.setViewControllers([DocumentsViewController], animated: true)
+            viewController = DocumentsViewController
+        case .settings:
+            let SettingsViewController = SettingsViewController()
+            SettingsViewController.title = "Settings"
+            SettingsViewController.view.backgroundColor = .systemBackground
+            SettingsViewController.tabBarItem.title = "Settings"
+            SettingsViewController.tabBarItem.image = UIImage(systemName: "gear")
+            navigationController.setViewControllers([SettingsViewController], animated: true)
+            viewController = SettingsViewController
+        case .password:
+            let documentCoordinator = DocumentCoordinator()
+            documentCoordinator.navControlles = navigationController
+            let PasswordViewController = PasswordViewController(coordinator: documentCoordinator)
+            PasswordViewController.title = "Авторизация"
+            PasswordViewController.view.backgroundColor = .systemBackground
+            PasswordViewController.tabBarItem.title = "Авторизация"
+            PasswordViewController.tabBarItem.image = UIImage(systemName: "gear")
+            navigationController.setViewControllers([PasswordViewController], animated: true)
             
         }
     }

@@ -20,6 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: scene)
         
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "Sorting")
+        
         let mainCoordinator = MainCoordinatorImp()
         window.rootViewController = mainCoordinator.startApplication()
         window.makeKeyAndVisible()

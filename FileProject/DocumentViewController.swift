@@ -29,10 +29,13 @@ class DocumentsViewController: UIViewController {
         
         navigationItem.rightBarButtonItem =  pictureAdd
         addSubviews()
-        pathToDocum = URL(string: NSSearchPathForDirectoriesInDomains(.documentDirectory,
-                                                                      .userDomainMask, true)[0])
+        pathToDocum = URL(string: NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0])
         setupConstraints()
         tuneTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     private func addSubviews() {
@@ -75,12 +78,24 @@ class DocumentsViewController: UIViewController {
             DispatchQueue.main.async {
                 if let dataImage = image.jpegData(compressionQuality: 1.0) {
                     do {
+                        let defaults = UserDefaults.standard
+                        let filesCount = defaults.integer(forKey: "fileCount")
                         let fileList = try FileManager.default.contentsOfDirectory(atPath: self.pathToDocum!.absoluteString) as [NSString]
-                        let filesCount  = fileList.count
                         let fileURL = self.pathToDocum!.appendingPathComponent("\(String(filesCount + 1)).png")
                         FileManager.default.createFile(atPath: fileURL.absoluteString, contents: dataImage)
+                        defaults.set(filesCount + 1, forKey: "fileCount")
                         //try dataImage.write(to: fileURL)
                         self.data.append(String(filesCount + 1) + ".png")
+                        let sorting = defaults.bool(forKey: "Sorting")
+                        if sorting {
+                            self.data.sort {
+                                $0 < $1
+                            }
+                        } else {
+                            self.data.sort {
+                                $0 > $1
+                            }
+                        }
                         self.tableView.reloadData()
                     } catch {}
                 }
@@ -115,6 +130,18 @@ extension DocumentsViewController: UITableViewDataSource {
         ) as? DocumentsTableViewCell else {
             fatalError("could not dequeueReusableCell")
         }
+        let defaults = UserDefaults.standard
+        let sorting = defaults.bool(forKey: "Sorting")
+        if sorting {
+            data.sort {
+                $0 < $1
+            }
+        } else {
+            data.sort {
+                $0 > $1
+            }
+        }
+        
         if data.count > 0 {
             cell.update(data[indexPath.row])
         }
@@ -137,8 +164,33 @@ extension DocumentsViewController: UITableViewDataSource {
             do {
                 try FileManager.default.removeItem(atPath: absolutePath)
                 data.remove(at: indexPath.row)
+                let defaults = UserDefaults.standard
+                let sorting = defaults.bool(forKey: "Sorting")
+                if sorting {
+                    data.sort {
+                        $0 < $1
+                    }
+                } else {
+                    data.sort {
+                        $0 > $1
+                    }
+                }
                 tableView.reloadData()
-            }catch {}
+            }catch {
+                data.remove(at: indexPath.row)
+                let defaults = UserDefaults.standard
+                let sorting = defaults.bool(forKey: "Sorting")
+                if sorting {
+                    data.sort {
+                        $0 < $1
+                    }
+                } else {
+                    data.sort {
+                        $0 > $1
+                    }
+                }
+                tableView.reloadData()
+            }
         }
     }
 }

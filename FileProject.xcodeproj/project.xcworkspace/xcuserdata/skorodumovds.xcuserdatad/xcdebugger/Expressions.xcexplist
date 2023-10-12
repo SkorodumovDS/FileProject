@@ -3,10 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ImagePicker.imagePickerController(_:didFinishPickingMediaWithInfo:):ImagePicker.swift">
+         contextName = "SettingsViewController.tableView(_:didSelectRowAt:):SettingsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fileURL">
+               value = "cell">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in DocumentsViewController.viewDidLoad():DocumentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$0.pathComponents.last?">
+            </PersistentString>
+            <PersistentString
+               value = "$0.pathComponents.last?.components(separatedBy: &quot;.&quot;).first">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +26,41 @@
          <PersistentStrings>
             <PersistentString
                value = "pathToDocum!.absoluteString +   pathToFile">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PasswordViewController.buttonPressed():PasswordViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "coordinator">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static AppDelegate.$main():AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ImagePicker.imagePickerController(_:didFinishPickingMediaWithInfo:):ImagePicker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DocumentsViewController.viewDidLoad():DocumentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURLs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DocumentCoordinator.showNextScreen():DocumentCoordinator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navControlles">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
